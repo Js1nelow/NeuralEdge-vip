@@ -47,19 +47,19 @@ html,body{width:100%;height:100%;font-family:Arial, sans-serif;background:#0b0f1
 ========================= */
 .glass-card{
     width:100%;max-width:420px;color:#fff;
-    backdrop-filter:blur(16px);
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.3);
-    transition:opacity .25s ease, filter .25s ease;
+    backdrop-filter: none; /* Убираем эффект стекла */
+    background: #161d27;   /* Сплошной темный цвет, как у нижней карточки */
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 16px;padding: 20px;display: flex;flex-direction: column;gap: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.3);
+    transition: opacity .25s ease, filter .25s ease;
 }
 .field-block{display:flex;flex-direction:column;gap:4px;cursor:pointer}
 .field-block label{font-size:14px;color:#ccc}
 .field-block input{
     padding:10px 12px;font-size:15px;border-radius:8px;color:#fff;
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.1);
+    background: rgba(255,255,255,.05); /* Легкое выделение внутри */
+    border: 1px solid rgba(255,255,255,.1);
     pointer-events:none;
 }
 
@@ -75,10 +75,10 @@ html,body{width:100%;height:100%;font-family:Arial, sans-serif;background:#0b0f1
 ========================= */
 .glass-signal{
     width:100%;max-width:420px;color:#fff;position:relative;z-index:2;
-    backdrop-filter:blur(16px);
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:10px;
+    backdrop-filter: none; /* Убираем размытие */
+    background: #161d27;   /* Устанавливаем сплошной темный цвет */
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 16px;padding:16px;display:flex;flex-direction:column;gap:10px;
     box-shadow:0 4px 12px rgba(0,0,0,.25);
     transition:margin-top .28s ease, box-shadow .28s ease, transform .28s ease;
     will-change:margin-top,transform;
@@ -111,8 +111,12 @@ body.analysis-open .wave-loader{opacity:0;transform:scale(.96)}
 .faq-title{font-size:24px;font-weight:700;margin-bottom:16px;text-align:left}
 .faq-list{display:flex;flex-direction:column;gap:12px}
 .faq-item{
-    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);
-    backdrop-filter:blur(16px);border-radius:12px;overflow:hidden;transition:.3s ease;
+    background: #161d27; /* Тот же сплошной цвет */
+    border: 1px solid rgba(255,255,255,.12);
+    backdrop-filter: none; /* Убираем прозрачность */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s ease;
 }
 .faq-question{
     width:100%;padding:14px 16px;background:none;border:0;color:#fff;
@@ -408,9 +412,10 @@ body.analysis-open .wave-loader{opacity:0;transform:scale(.96)}
 
 /* контейнер карточки — как раньше, но без лишнего свечения */
 .glass-signal{
-    background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.03));
-    border:1px solid var(--c-stroke);
-    box-shadow:0 10px 32px rgba(0,0,0,.36);
+    background: #161d27; /* Сплошной цвет подложки */
+    backdrop-filter: none; /* Отключаем стекло */
+    border: 1px solid var(--c-stroke);
+    box-shadow: 0 10px 32px rgba(0,0,0,.36);
 }
 
 /* Лента направления — прежняя идея, но чуть компактнее и спокойнее */
